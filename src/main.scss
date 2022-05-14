@@ -1,0 +1,25 @@
+:root {
+  --blue-gray: #313f49;
+  --gray: #737980;
+  --pale-red: #c33940;
+  --pale-gray: #e9f1f4;
+  --pale-gray-shadow: #b6b6b6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  display: flex;
+}
