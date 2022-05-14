@@ -1,0 +1,17 @@
+{
+  "foralula": [],
+  "forabolsonaro": [
+    {
+      "title": "Recomendação da cloroquina para mulheres grávidas.",
+      "description": "Bolsonaro fala que a TV Globo em 2016 recomendou o uso de cloroquina para mulheres grávidas, contra a zika.",
+      "epoch_timestamp": "1609297200",
+      "id_page": "#recomenda-cloroquina-gravidas"
+    },
+    {
+      "title": "Flávio Bolsonaro vota contra CPI da Lava Toga",
+      "description": "Flávio Bolsonaro se alia ao PT e vota contra a CPI da Lava Toga, que iria investigar ações do Supremo Tribunal.",
+      "epoch_timestamp": "1568257200",
+      "id_page": "#flavio-enterra-lava-loga"
+    }
+  ]
+}

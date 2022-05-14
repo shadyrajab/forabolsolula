@@ -5,8 +5,8 @@
 
 <main>
   <List />
+  <Contribute />
 </main>
-<Contribute />
 
 <style lang="scss">
   :global(body) {
@@ -16,6 +16,7 @@
   }
 
   main {
-    padding: 23px;
+    width: 90vw;
+    margin: 0 auto;
   }
 </style>

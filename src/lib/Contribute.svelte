@@ -1,31 +1,31 @@
 <aside>
-  <p>
-    Contribua com o projeto
-    <a href="https://github.com/shadyrajab/forabolsolula">aqui</a>
-  </p>
+  <a href="https://github.com/shadyrajab/forabolsolula">
+    Contribua com o projeto aqui</a
+  >
 </aside>
 
 <style lang="scss">
   aside {
     position: fixed;
-    top: 5px;
-    right: 5px;
-
-    background-color: #ffffff;
-    padding: 5px;
-
-    border-radius: 5px;
-
-    box-shadow: 0 0 2px var(--pale-gray-shadow);
-  }
-
-  p {
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: var(--gray);
+    bottom: 10px;
+    left: 5px;
   }
 
   a {
-    color: var(--pale-red);
+    background-color: #ffffff;
+
+    border-radius: 5px;
+
+    height: 30px;
+    width: max-content;
+
+    box-shadow: 0 0 2px var(--pale-gray-shadow);
+
+    padding: 5px;
+
+    font-weight: 700;
+    font-size: 0.9rem;
+
+    color: var(--gray);
   }
 </style>

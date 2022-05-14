@@ -1,42 +1,52 @@
 <script>
+  export let title;
+  export let description;
+  export let epoch_timestamp;
+  export let id_page;
+
+  $: formatedDate = new Date(epoch_timestamp * 1000).toLocaleDateString(
+    "pt-BR",
+    { dateStyle: "medium" }
+  );
+
+  let expanded = false;
 </script>
 
-<li>
-  <a href="">
+<li class:expanded on:click={() => (expanded = !expanded)}>
+  <a href={id_page}>
     <section>
       <header>
         <h1>
-          André Mendonça atende pedido da AGU e suspende políticas estaduais
-          sobre o ICMS do diesel.
+          {title}
         </h1>
       </header>
       <main>
-        <p>
-          Mendonça suspendeu, também nesta sexta, as políticas estaduais sobre o
-          ICMS que incide no óleo diesel. As novas regras, definidas em março
-          pelo Conselho Nacional de Política Fazendária (Confaz), entrariam em
-          vigor em 1º de julho.
+        <p class="description">
+          {description}
         </p>
       </main>
-      <footer>
-        <p>13 de março de 2020 as 20h27</p>
-      </footer>
     </section>
   </a>
+  <aside>
+    <p>{formatedDate}</p>
+  </aside>
 </li>
 
-<style lang="scss">
+<style lang="scss" scoped>
   li {
-    background-color: white;
-
-    border-radius: 5px;
-
-    padding: 15px;
-    padding-bottom: 5px;
-
     position: relative;
 
-    transition: 200ms;
+    background-color: white;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    padding: 15px 10px 10px;
+    margin-left: 20px;
+
+    transition: 500ms;
+
+    max-height: 300px;
 
     cursor: pointer;
 
@@ -73,16 +83,25 @@
     color: var(--gray);
   }
 
-  footer {
-    display: flex;
+  aside {
+    background-color: #c33940;
 
-    justify-content: flex-end;
+    text-align: center;
 
-    margin-top: 15px;
+    padding: 5px 7.5px;
+
+    border: 2.5px solid #fff;
+    border-radius: 5px;
+
+    position: absolute;
+    top: -25px;
+    right: 5px;
 
     p {
-      font-size: 0.8rem;
-      font-style: italic;
+      font-size: 1rem;
+      font-weight: 900;
+
+      color: #ffffff;
     }
   }
 </style>
