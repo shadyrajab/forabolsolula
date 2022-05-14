@@ -2,7 +2,7 @@
   import Card from "./Card.svelte";
 
   async function request() {
-    const response = await fetch("http://localhost:3000/forabolsonaro");
+    const response = await fetch("https://shadyrajab.github.io/forabolsolula/forabolsonaro.json");
     const json = await response.json();
 
     return json;
