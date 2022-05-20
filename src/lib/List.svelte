@@ -2,7 +2,9 @@
   import Card from "./Card.svelte";
 
   async function request() {
-    const response = await fetch("https://shadyrajab.github.io/forabolsolula/forabolsonaro.json");
+    const response = await fetch(
+      "https://shadyrajab.github.io/forabolsolula/forabolsonaro.json"
+    );
     const json = await response.json();
 
     return json;
@@ -15,8 +17,8 @@
   {#await promise}
     <p>loading</p>
   {:then news}
-    {#each news.sort((a, b) => a - b) as item}
-      <Card {...item} />
+    {#each news.sort((a, b) => a - b) as item, index}
+      <Card {...item} {index} />
     {/each}
   {:catch error}
     <p>fail</p>
@@ -25,16 +27,10 @@
 
 <style lang="scss">
   ul {
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 40px;
+    display: grid;
 
-    padding: 50px 0;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 
-    min-height: 100vh;
-
-    border-left: 5px solid #c0c8d1;
-
-    position: relative;
+    gap: 20px;
   }
 </style>

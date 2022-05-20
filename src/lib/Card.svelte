@@ -3,17 +3,18 @@
   export let description;
   export let epoch_timestamp;
   export let id_page;
+  export let index;
+  export let hashtags = [];
+  export let source = [];
 
   $: formatedDate = new Date(epoch_timestamp * 1000).toLocaleDateString(
     "pt-BR",
     { dateStyle: "medium" }
   );
-
-  let expanded = false;
 </script>
 
-<li class:expanded on:click={() => (expanded = !expanded)}>
-  <a href={id_page}>
+<li class="container" style={`animation-duration: ${++index * 300}ms`}>
+  <a href={source[0]} target="_blank" rel="noreferrer noopener">
     <section>
       <header>
         <h1>
@@ -26,82 +27,91 @@
         </p>
       </main>
     </section>
+    <footer>
+      <ul>
+        {#each hashtags as item}
+          <li>{item}</li>
+        {/each}
+      </ul>
+    </footer>
+    <aside>
+      <p>
+        {formatedDate}
+      </p>
+    </aside>
   </a>
-  <aside>
-    <p>{formatedDate}</p>
-  </aside>
 </li>
 
-<style lang="scss" scoped>
-  li {
+<style lang="scss">
+  .container {
     position: relative;
+    animation-name: appear;
+    animation-fill-mode: forwards;
 
-    background-color: white;
+    a {
+      display: block;
+      background-color: #ffffff;
+      border-radius: 5px;
 
-    border: 1px solid transparent;
-    border-radius: 5px;
+      width: 100%;
+    }
 
-    padding: 15px 10px 10px;
-    margin-left: 20px;
+    main {
+      padding: 10px;
+    }
 
-    transition: 500ms;
+    h1 {
+      font-size: 1.2rem;
+      border-radius: 5px 5px 0 0;
 
-    max-height: 300px;
+      letter-spacing: 0.5px;
+      font-weight: 900;
 
-    cursor: pointer;
+      margin-right: 10px;
+      padding: 10px 5px 5px 10px;
 
-    border: 1px solid transparent;
-
-    &::before {
-      content: "";
-
-      width: 20px;
-      height: 20px;
-
-      border-radius: 50%;
-      border: 2.5px solid #fff;
-
-      background-color: #c33940;
-
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 22px;
-      left: -22px;
+      color: #313f49;
     }
   }
 
-  h1 {
-    font-weight: 900;
-    font-size: 1.2rem;
+  footer {
+    padding-left: 10px;
+    padding-bottom: 30px;
 
-    margin-bottom: 10px;
+    ul {
+      display: flex;
+      flex-flow: row wrap;
 
-    color: var(--blue-gray);
-  }
+      gap: 7.5px;
 
-  p {
-    color: var(--gray);
+      font-weight: bold;
+
+      color: #c33940;
+
+      li::before {
+        content: "#";
+      }
+    }
   }
 
   aside {
-    background-color: #c33940;
-
-    text-align: center;
-
-    padding: 5px 7.5px;
-
-    border: 2.5px solid #fff;
-    border-radius: 5px;
-
     position: absolute;
-    top: -25px;
-    right: 5px;
+
+    right: 10px;
+    bottom: 10px;
 
     p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 900;
 
-      color: #ffffff;
+      text-transform: uppercase;
+      text-align: right;
+
+      letter-spacing: 1px;
     }
+  }
+
+  p {
+    color: #737980;
   }
 </style>
