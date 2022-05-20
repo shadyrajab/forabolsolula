@@ -1,20 +1,43 @@
 [
   {
-    "title": "Recomendação da cloroquina para mulheres grávidas.",
+    "title": "Bolsonaro diz que TV Globo recomendou cloroquina para mulheres grávidas.",
     "description": "Bolsonaro fala que a TV Globo em 2016 recomendou o uso de cloroquina para mulheres grávidas, contra a zika.",
     "epoch_timestamp": "1609297200",
-    "id_page": "#recomenda-cloroquina-gravidas"
+    "id_page": "#recomenda-cloroquina-gravidas",
+    "source": [
+      "https://twitter.com/desmentindobozo/status/1345410947637248003"
+    ],
+    "hashtags": [
+      "#mentira",
+      "#farsa"
+    ]
   },
   {
     "title": "Flávio Bolsonaro vota contra CPI da Lava Toga",
     "description": "Flávio Bolsonaro se alia ao PT e vota contra a CPI da Lava Toga, que iria investigar ações do Supremo Tribunal.",
     "epoch_timestamp": "1568257200",
-    "id_page": "#flavio-enterra-lava-loga"
+    "hashtags": [
+      "#farsa",
+      "#consequencia"
+    ],
+    "id_page": "#flavio-enterra-lava-loga",
+    "source": [
+      "https://www.gazetadopovo.com.br/republica/flavio-bolsonaro-pt-alianca-contra-cpi-lava-toga/"
+    ]
   },
   {
-    "title":"Bolsonaro não privatiza TV Brasil",
-    "description": "Alvo de críticas durante a campanha do então candidato Jair Bolsonaro, a TV Brasil seria uma das empresas que entraria no pacote de privatizações do ministério da economia.\nHoje, a estatal é utilizada como forma de divulgar e promover as ações do governo e beneficiar aliados políticos.",
+    "title": "Bolsonaro não privatiza TV Brasil",
+    "description": "Hoje, a estatal é utilizada como forma de divulgar e promover as ações do governo e beneficiar aliados políticos.",
     "epoch_timestamp": "1540771200",
-    "id_page":"#bolsonaro-nao-privatiza-tv-brasil"
+    "hashtags": [
+      "#farsa",
+      "#mentira",
+      "contradição"
+    ],
+    "id_page": "#bolsonaro-nao-privatiza-tv-brasil",
+    "source": [
+      "https://noticiasdatv.uol.com.br/noticia/televisao/jair-bolsonaro-diz-que-vai-extinguir-ou-privatizar-a-tv-brasil-criada-por-lula-23012",
+      "https://www.cartacapital.com.br/politica/governo-bolsonaro-aumenta-gastos-com-a-tv-brasil-que-presidente-prometia-fechar/"
+    ]
   }
 ]
